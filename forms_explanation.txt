@@ -1,0 +1,244 @@
+following three offline forms:
+
+1. Project Submission Checklist & Declaration Form (New Project)
+2. Project Account Opening & Budget Bifurcation Form
+3. Indent for Project Grant (Form PC)
+
+
+
+# MODULE 1: NEW PROJECT (DECLARATION FORM)
+
+### SECTION A: BASIC PROJECT DETAILS
+
+| Field Name                     | Type                      | Required | Notes        |
+| ------------------------------ | ------------------------- | -------- | ------------ |
+| Project Title                  | Text                      | Yes      |              |
+| Funding Agency                 | Text + Agency Master List | Yes      |              |
+| Scheme / Call Ref No           | Text                      | Yes      |              |
+| PI Name                        | Auto from Login           | Yes      | Non-editable |
+| PI Designation                 | Auto                      | Yes      |              |
+| PI Department                  | Auto                      | Yes      |              |
+| Co-PI Details                  | Repeatable Section        | No       |              |
+| Collaborating Institute        | Text                      | No       |              |
+| Project Duration               | Date Range Picker         | Yes      |              |
+| Total Estimated Budget         | Currency                  | Yes      |              |
+| Funding Agency Format Followed | Yes/No Toggle             | Yes      |              |
+| AI Usage in Proposal           | Percentage                | Yes      |              |
+| Plagiarism Percentage          | Percentage                | Yes      |              |
+
+---
+
+### SECTION B: BUDGET HEADS
+
+Repeatable structured table:
+
+* Equipment
+* Manpower
+* Consumables
+* Travel
+* Contingency
+* Overhead
+* Others
+
+Each row must contain:
+
+| Budget Head | Amount |
+
+Auto-calculate:
+
+* Total Budget
+* Overhead (if funding rules apply)
+
+---
+
+### SECTION C: DOCUMENT UPLOADS
+
+| Document                        | Required       |
+| ------------------------------- | -------------- |
+| Complete Proposal               | Yes            |
+| Endorsement Letter              | Conditional    |
+| PI/Co-PI Undertaking            | Yes            |
+| Institutional Forwarding Letter | Auto-Generated |
+| Other Supporting Docs           | Optional       |
+
+Allowed formats: PDF / DOCX
+Max Size: 10MB per file
+
+---
+
+### SECTION D: DECLARATION
+
+Checkbox-based legal undertaking
+Mandatory before submission
+
+---
+
+### SECTION E: DIGITAL SIGNATURES
+
+| Role | Action |
+PI | Submit + eSign |
+HoD | Approve / Reject + eSign |
+Dean | Approve / Reject + eSign |
+
+---
+
+# MODULE 2: PROJECT ACCOUNT OPENING & BUDGET BIFURCATION
+
+### SECTION A: PROJECT INFO
+
+Add:
+
+| Field | Notes |
+Sanction Letter No | Mandatory |
+Sanction Date | Mandatory |
+Funding Scheme Name |
+Project Start Date |
+Project End Date |
+Total Project Cost |
+First Installment Received |
+
+Remove:
+
+* Manual Tick for 1st/2nd/3rd/4th Year
+  Replace with:
+
+Installment Number (Dropdown)
+
+---
+
+### SECTION B: BUDGET UTILIZATION TABLE
+
+Dynamic Table:
+
+| Budget Head | Balance as per UC | Expenditure | Current Balance (Auto) | New Grant Allocation | Total Balance (Auto) |
+
+Validation:
+
+* Expenditure ≤ Balance
+* New Grant ≥ 0
+* Total Balance = Current + New
+
+---
+
+### SECTION C: FUND RECEIPT DETAILS
+
+| Field |
+Mode of Transfer |
+UTR Number |
+Date of Credit |
+Amount Received |
+
+Validation:
+
+* UTR format check
+* Amount > 0
+* Credit date ≥ Sanction Date
+
+---
+
+# MODULE 3: INDENT FOR PROJECT GRANT (FORM PC)
+
+### SECTION A: GRANT TYPE
+
+Radio:
+
+* Non-Recurring
+* Recurring
+* Overhead
+
+---
+
+### SECTION B: PROCUREMENT DETAILS
+
+| Field |
+Budget Head |
+Amount Sanctioned |
+Available Balance |
+Procurement Mode |
+
+Dropdown:
+
+* GeM
+* E-Portal
+* RC
+* Tender
+* Purchase Committee
+* Single Quotation
+
+---
+
+### SECTION C: ITEM DETAILS (REPEATABLE)
+
+| Item Name |
+Description |
+Catalog No |
+Make |
+Quantity |
+Rate |
+Discount % |
+GST % |
+Total Price (Auto) |
+Stock Available (Yes/No) |
+Location: PI Lab / Dept |
+
+Validation:
+
+* Quantity > 0
+* GST between 0–28%
+* Discount ≤ 100%
+* Total Price auto-computed
+
+---
+
+### SECTION D: ENCLOSURES
+
+Checkbox + Upload:
+
+* Draft PO
+* GeM Non-Availability
+* Dept Non-Availability
+* Sanction Letter
+* Rate Contract NA Certificate
+* Quotation Proof
+* Equipment Proof
+* Conference Invite
+
+---
+
+### SECTION E: REQUEST TYPE
+
+* Advance
+* Reimbursement
+
+If Reimbursement:
+
+Amount ≤ ₹5000 (Contingency/Travel only)
+
+---
+
+# NEW SYSTEM-LEVEL ADDITIONS REQUIRED
+
+### ADD:
+
+* Project ID (Auto Generated)
+* Workflow Status Tracker
+* Submission History Log
+* Role-based Access Control
+* Email Notifications
+* Audit Trail
+* Auto-generated Institutional Forwarding Letter
+* eSign Hash Storage
+* Version Control for Budget Revisions
+
+---
+
+# GLOBAL VALIDATION RULES
+
+* Dates must follow Project Timeline
+* Budget Head Sum = Total Budget
+* Uploaded Documents Mandatory before PI Submit
+* HoD/Dean cannot edit PI data (Only comment)
+* Rejected forms return to PI with remarks
+* No approval without Digital Signature
+
+---
