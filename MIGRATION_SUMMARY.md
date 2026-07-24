@@ -18,12 +18,12 @@ Create a `.env` file in the `backend` directory with the following variables:
 
 ```env
 PORT=3000
-MONGO_URI=mongodb+srv://tejasvaidya123580_db_user:9586@cluster0.arvwmyn.mongodb.net/?appName=Cluster0
-JWT_SECRET=secret@123
+MONGO_URI=mongodb+srv://
+JWT_SECRET=s
 NODE_ENV=development
-CLOUDINARY_NAME=dz6djmeqr
-CLOUDINARY_API_KEY=474711874183414
-CLOUDINARY_API_SECRET=Rds1bOUCzFFaGwh-IbI9_FadVvU
+CLOUDINARY_NAME=dz6
+CLOUDINARY_API_KEY=47471
+CLOUDINARY_API_SECRET=Rd
 ```
 
 **Note:** The `.env` file is gitignored. Copy `.env.example` to `.env` and update with your credentials.
