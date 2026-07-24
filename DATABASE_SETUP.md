@@ -58,7 +58,7 @@ When you start using the application, these collections will be created automati
 Your current connection string connects to the **"test"** database. If you want to use a different database name, update your `.env`:
 
 ```env
-MONGO_URI=mongodb+srv://tejasvaidya123580_db_user:9586@cluster0.arvwmyn.mongodb.net/YOUR_DB_NAME?appName=Cluster0
+MONGO_URI=mongodb+srv://tejasvaidya123580_db_user:9R_DB_NAME?appName=Cluster0
 ```
 
 Replace `YOUR_DB_NAME` with your desired database name. If omitted, MongoDB uses "test" as default.
