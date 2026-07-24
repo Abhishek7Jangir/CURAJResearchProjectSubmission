@@ -4,4 +4,3 @@ dist/
 build/
 .env
 backend/database.sqlite
-.gemini/
