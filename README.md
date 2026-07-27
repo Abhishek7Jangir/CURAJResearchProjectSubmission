@@ -41,23 +41,23 @@ A full-stack web application for managing university research projects at the Ce
 
 ### Project Proposal (Module 1)
 ```
-PI submits → HOD → Dean → R&D Office → R&D Officer → [IAO / Finance Office / Registrar / VC Office] → Vice Chancellor → APPROVED
+PI submits → HOD → Dean → R&D Office → R&D Officer → [IAO / Finance Office] → Registrar → APPROVED/REJECTED
 ```
 The R&D Officer can forward to different paths depending on the project type (configurable per submission).
 
 ### Project Account Opening (Module 2)
 ```
-PI submits → HOD → Dean → R&D Office → R&D Officer → Finance Office → Finance Officer → APPROVED
+PI submits → HOD → Dean → R&D Office → R&D Officer → Finance Office → Finance Officer → APPROVED/REJECTED
 ```
 
 ### Indent Approval
 ```
-PI submits → HOD → Dean → R&D Office → R&D Officer → [IAO / Finance Office / Registrar / VC Office] → Vice Chancellor → APPROVED (budget deducted)
+PI submits → HOD → Dean → R&D Office → R&D Officer → [IAO / Finance Office → Finance Officer/ Registrar / VC Office] → Vice Chancellor → APPROVED (budget deducted) / REJECTED
 ```
 
 ### Utilization Certificate
 ```
-PI submits → HOD → Dean → R&D Office → R&D Officer → Finance Office → Finance Officer → APPROVED
+PI submits → HOD → Dean → R&D Office → R&D Officer → Finance Office → Finance Officer → APPROVED/REJECTED
 ```
 
 ---
